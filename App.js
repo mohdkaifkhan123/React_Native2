@@ -7,7 +7,8 @@
  */
 
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -15,7 +16,6 @@ import {
   TextInput,
   View,
   FlatList,
-  Image,
   TouchableOpacity,
 } from 'react-native';
 import {Hamburger} from './assets/SVG';
@@ -23,6 +23,7 @@ import Color from './assets/UI/Color';
 import {SearchIcon} from './assets/SVG';
 import {Scroller} from './assets/SVG';
 import {Filter} from './assets/SVG';
+import LottieView from 'lottie-react-native';
 import {
   Nike,
   Converse,
@@ -35,7 +36,6 @@ import {
   Converse2,
   Heart,
   Nike8,
-  HeartFilled,
 } from './assets/SVG';
 
 const Fun = () => {
@@ -51,7 +51,14 @@ const Fun = () => {
     <TouchableOpacity onPress={checkWork}>
       <View style={styles.heart}>
         {change && <Heart />}
-        {!change && <HeartFilled style={{height: 20, width: 20}} />}
+        {!change && (
+          <LottieView
+            source={require('./assets/SVG/HeartLottie.json')}
+            autoPlay
+            loop={false}
+            style={styles.lotte}
+          />
+        )}
       </View>
     </TouchableOpacity>
   );
@@ -289,6 +296,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingBottom: 15,
     fontWeight: '700',
+  },
+  lotte: {
+    right: -32,
+    top: -37,
+    height: 90,
+    width: 88,
   },
 });
 

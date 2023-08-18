@@ -14,6 +14,7 @@ import Converse from './Converse.svg';
 import Converse2 from './Converse2.svg';
 import Heart from './Heart.svg';
 import HeartFilled from './HeartFilled.svg';
+import HeartLottie from './HeartLottie.json';
 export {
   Hamburger,
   SearchIcon,
@@ -31,4 +32,5 @@ export {
   Heart,
   Nike8,
   HeartFilled,
+  HeartLottie,
 };
