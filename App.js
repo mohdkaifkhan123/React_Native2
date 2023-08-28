@@ -58,6 +58,7 @@ const Fun = () => {
             loop={false}
             style={styles.lotte}
           />
+          //hdudh
         )}
       </View>
     </TouchableOpacity>
